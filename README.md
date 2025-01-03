@@ -95,20 +95,3 @@ This tool relies on pattern matching and heuristics for technology detection. It
 ## License
 
 [Your License Here (e.g., MIT License)]
-```
-
-**Explanation of the Content:**
-
-* **GitHub Description:** This is a concise summary displayed on the project's main page. It highlights the core functionality.
-* **README.md:** This file provides more detailed information for users and potential contributors.
-    * **Clear Title and Introduction:** Explains what the tool is and its purpose.
-    * **Key Features:** Lists the main capabilities of the tool.
-    * **Prerequisites:**  Essential for users to set up their environment correctly. Specific installation commands for common operating systems are very helpful.
-    * **Installation (Compilation):** Provides step-by-step instructions on how to build the executable.
-    * **Usage:** Explains how to run the tool and provides an example.
-    * **Configuration:**  Since the current version requires code modification, it explains how to do that.
-    * **Contributing:** Encourages community involvement.
-    * **Disclaimer:** Important to manage user expectations regarding accuracy.
-    * **License:**  Essential for open-source projects. You should replace `[Your License Here]` with the actual license (e.g., MIT, Apache 2.0).
-
-This structure is standard for GitHub repositories and provides users with the necessary information to understand, install, and use your tool. Remember to replace the placeholder license with your chosen license.
