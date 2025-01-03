@@ -20,13 +20,13 @@ A command-line tool written in C++ to identify website technologies. It analyzes
 
 ## Installation (Compilation)
 
-1. Save the C++ code (e.g., as `tech_identifier.cpp`).
+1. Save the C++ code (e.g., as `bopa-alyzer.cpp`).
 2. Open your terminal or command prompt.
 3. Navigate to the directory where you saved the file.
 4. Compile the code using a C++ compiler like g++:
 
    ```bash
-   g++ tech_identifier.cpp -o tech_identifier -lcurl -std=c++17
+   g++ bopa-alyzer.cpp -o bopa-alyzer -lcurl -std=c++17
    ```
 
    * Make sure you have `libcurl` installed correctly, otherwise the compilation will fail. You might need to adjust `-std=c++17` based on your compiler's support.
@@ -36,7 +36,7 @@ A command-line tool written in C++ to identify website technologies. It analyzes
 To run the tool, use the following command in your terminal:
 
 ```bash
-./tech_identifier <URL>
+./bopa-alyzer <URL>
 ```
 
 Replace `<URL>` with the website address you want to analyze (e.g., `https://www.example.com`).
@@ -44,7 +44,7 @@ Replace `<URL>` with the website address you want to analyze (e.g., `https://www
 **Example:**
 
 ```bash
-./tech_identifier https://www.wordpress.org
+./bopa-alyzer https://www.wordpress.org
 ```
 
 **Output:**
@@ -70,7 +70,7 @@ No specific technologies detected based on current patterns.
 
 Currently, the technology detection patterns are defined within the `identifyTechnologies` function in the source code. To add or modify technology detections, you need to:
 
-1. Open the `tech_identifier.cpp` file.
+1. Open the `bopa-alyzer.cpp` file.
 2. Locate the `identifyTechnologies` function.
 3. Add or modify entries in the `technologies` vector. Each entry defines a technology name and the regular expressions/methods used to detect it.
 4. Recompile the code after making changes.
