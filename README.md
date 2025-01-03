@@ -27,3 +27,88 @@ A command-line tool written in C++ to identify website technologies. It analyzes
 
    ```bash
    g++ tech_identifier.cpp -o tech_identifier -lcurl -std=c++17
+   ```
+
+   * Make sure you have `libcurl` installed correctly, otherwise the compilation will fail. You might need to adjust `-std=c++17` based on your compiler's support.
+
+## Usage
+
+To run the tool, use the following command in your terminal:
+
+```bash
+./tech_identifier <URL>
+```
+
+Replace `<URL>` with the website address you want to analyze (e.g., `https://www.example.com`).
+
+**Example:**
+
+```bash
+./tech_identifier https://www.wordpress.org
+```
+
+**Output:**
+
+The tool will output information about the fetched website content and any detected technologies. For example:
+
+```
+Website content fetched successfully (HTTP 200).
+Detected technologies for https://www.wordpress.org:
+- WordPress (found in HTML)
+- PHP (found in HTML)
+- Nginx (found in headers - Server)
+```
+
+If no specific technologies are detected based on the defined patterns, it will output:
+
+```
+Website content fetched successfully (HTTP 200).
+No specific technologies detected based on current patterns.
+```
+
+## Configuration
+
+Currently, the technology detection patterns are defined within the `identifyTechnologies` function in the source code. To add or modify technology detections, you need to:
+
+1. Open the `tech_identifier.cpp` file.
+2. Locate the `identifyTechnologies` function.
+3. Add or modify entries in the `technologies` vector. Each entry defines a technology name and the regular expressions/methods used to detect it.
+4. Recompile the code after making changes.
+
+## Contributing
+
+Contributions are welcome! If you want to add support for detecting more technologies or improve the existing detection logic, feel free to:
+
+* **Submit Pull Requests:**  Propose changes to the code with new technology patterns or improvements.
+* **Open Issues:** Report bugs or suggest new features.
+
+When contributing, please follow these guidelines:
+
+* Ensure your code adheres to good C++ practices.
+* Provide clear and concise commit messages.
+* Explain the purpose of your changes in your pull request.
+
+## Disclaimer
+
+This tool relies on pattern matching and heuristics for technology detection. It may not always be accurate and could produce false positives or false negatives. The accuracy depends on the comprehensiveness of the defined detection patterns.
+
+## License
+
+[Your License Here (e.g., MIT License)]
+```
+
+**Explanation of the Content:**
+
+* **GitHub Description:** This is a concise summary displayed on the project's main page. It highlights the core functionality.
+* **README.md:** This file provides more detailed information for users and potential contributors.
+    * **Clear Title and Introduction:** Explains what the tool is and its purpose.
+    * **Key Features:** Lists the main capabilities of the tool.
+    * **Prerequisites:**  Essential for users to set up their environment correctly. Specific installation commands for common operating systems are very helpful.
+    * **Installation (Compilation):** Provides step-by-step instructions on how to build the executable.
+    * **Usage:** Explains how to run the tool and provides an example.
+    * **Configuration:**  Since the current version requires code modification, it explains how to do that.
+    * **Contributing:** Encourages community involvement.
+    * **Disclaimer:** Important to manage user expectations regarding accuracy.
+    * **License:**  Essential for open-source projects. You should replace `[Your License Here]` with the actual license (e.g., MIT, Apache 2.0).
+
+This structure is standard for GitHub repositories and provides users with the necessary information to understand, install, and use your tool. Remember to replace the placeholder license with your chosen license.
